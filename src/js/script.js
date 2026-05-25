@@ -5,7 +5,7 @@ const cardData = {
     content: `
       <p>Aqui você encontra todos os meus projetos e repositórios públicos.</p>
       <p>Estou sempre commitando novos projetos e evoluindo meu código!</p>
-      <a href="https://github.com/SEU_USUARIO" target="_blank">Acessar GitHub →</a>
+      <a href="https://github.com/joao-jps" target="_blank">Acessar GitHub →</a>
     `
   },
   linkedin: {
@@ -13,14 +13,14 @@ const cardData = {
     content: `
       <p>Conecte-se comigo no LinkedIn para acompanhar minha trajetória profissional.</p>
       <p>Estou aberto a oportunidades de estágio e networking!</p>
-      <a href="https://linkedin.com/in/SEU_USUARIO" target="_blank">Acessar LinkedIn →</a>
+      <a href="https://www.linkedin.com/in/joaojps/" target="_blank">Acessar LinkedIn →</a>
     `
   },
   curriculo: {
     title: "Currículo",
     content: `
       <p>Confira meu currículo completo com minhas experiências, formação e habilidades.</p>
-      <a href="./curriculo.pdf" target="_blank" download>Baixar Currículo →</a>
+      <a href="" target="_blank" download>Baixar Currículo →</a>
     `
   },
   email: {
