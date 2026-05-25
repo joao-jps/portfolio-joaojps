@@ -21,22 +21,25 @@ const cardData = {
     title: "Currículo",
     content: `
       <p>Confira meu currículo completo com minhas experiências, formação e habilidades.</p>
-      <a href="" download>Baixar Currículo →</a>
+      <a href="./src/assets/curriculojpsvscode.pdf" download>Baixar Currículo →</a>
     `
   },
   email: {
     title: "E-mail",
     content: `
       <p>Prefere o e-mail? Me manda uma mensagem diretamente!</p>
-      <a href="mailto:seuemail@email.com">seuemail@email.com →</a>
+      <a href="mailto:jujp.souza@gmail.com">jujp.souza@gmail.com →</a>
     `
+    
   },
   "sobre-mais": {
     title: "Mais sobre mim",
     content: `
-      <p>Tenho 18 anos, estudo <strong>Engenharia de Software</strong> na <strong>FIAP</strong> e atualmente estou no <strong>1º Semestre</strong>.</p>
-      <p>Comecei a programar em <strong>janeiro</strong> de <strong>2026</strong> e desde então busco constantes desafios em prol da evolução acadêmica e profissional.</p>
-      <p>Meu objetivo é me tornar um desenvolvedor full stack, contribuindo com projetos reais e impactantes.</p>
+     <p>Tenho 18 anos e curso <strong>Engenharia de Software</strong> na <strong>FIAP</strong>, estando no <strong>1º semestre</strong>.</p>
+
+     <p>Iniciei meus estudos em programação recentemente e desde então venho desenvolvendo projetos práticos para fortalecer minhas habilidades técnicas.</p>
+
+     <p>Busco minha primeira oportunidade de estágio na área de tecnologia, com foco em <strong>Desenvolvimento Web</strong> e aprendizado contínuo.</p>
     `
   },
 
@@ -51,7 +54,7 @@ const cardData = {
   },
   "skill-js": {
     title: "JavaScript",
-    content: `<p>Manipulação de DOM, Arrays, Objetos, Eventos, Estruturas de Decisão, fetch de APIs e lógica de programação.</p><p>Nível: <strong>Básico/Intermediário</strong></p>`
+    content: `<p>Arrays, Objetos, Eventos, Fetch de APIs e Lógica de programação.</p><p>Nível: <strong>Intermediário</strong></p>`
   },
   "skill-python": {
     title: "Python",
@@ -79,16 +82,26 @@ const cardData = {
     title: "Vinharia Agnello",
     content: `
       <p>Landing page elegante para uma vinharia com foco em design e tipografia.</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS</p>
-      <a href="https://github.com/SEU_USUARIO/vinharia" target="_blank">Ver no GitHub →</a>
+      <p><strong>Tecnologias:</strong> HTML, CSS, JS</p>
+      <a href="https://github.com/joao-jps/CP2-Vinharia-Agnello.git" target="_blank">Ver no GitHub →</a>
+    `
+  },
+  "proj-vinharia2": {
+    title: "Vinharia Agnello (JS)",
+    content: `
+      <p>Vinharia Agnello com foco no sistema de informação dos vinhos utilizando de JS</p>
+      <p><strong>Tecnologias:</strong> HTML, CSS, JS</p>
+      <a href="https://github.com/joao-jps/vinheria-agnello-checkpoint03.git" target="_blank">Ver no GitHub →</a>
     `
   },
   "proj-Jovi": {
     title: "Jovi Vision Core",
     content: `
-      <p>Site apresentando em detalhes o projeto de inovação Jovi Vision Core desde sua ídeia até sua estrutura inicial.</p>
+      <p>Projeto acadêmico focado em inovação tecnológica, apresentando a estrutura e funcionalidades do sistema <strong>Jovi Vision Core.</strong></p>
+
+      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript e integração com API REST.</p>
       <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, API REST</p>
-      <a href="https://github.com/SEU_USUARIO/pokedex" target="_blank">Ver no GitHub →</a>
+      <a href="https://github.com/joao-jps/Sprint-2-Jovi.git" target="_blank">Ver no GitHub →</a>
     `
   }
 };
