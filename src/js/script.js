@@ -1,3 +1,4 @@
+
 // ===== DADOS DOS CARDS =====
 const cardData = {
   github: {
@@ -20,7 +21,7 @@ const cardData = {
     title: "Currículo",
     content: `
       <p>Confira meu currículo completo com minhas experiências, formação e habilidades.</p>
-      <a href="" target="_blank" download>Baixar Currículo →</a>
+      <a href="" download>Baixar Currículo →</a>
     `
   },
   email: {
