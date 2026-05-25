@@ -173,7 +173,7 @@ body {
   border-color: var(--accent);
 }
 
-.skill-card i { font-size: 2.5rem; color: var(--accent); }  
+.skill-card i { font-size: 2.5rem; }  
 .skill-card span { font-size: 0.9rem; color: var(--text-muted); }
 
 /* ===== PROJETOS ===== */
@@ -302,4 +302,24 @@ footer {
   .nav-links.open { display: flex; }
   .hamburger { display: block; }
   .hero-name { font-size: 2.5rem; }
+}
+
+.python-icon {         /* Class para pintar a logo do python pois precisa usar background-clip para pintar com duas cores*/
+  font-size: 3rem;
+
+  background: linear-gradient(
+    135deg,
+    #3776AB 15%,
+    #4B8BBE 45%,
+    #FFD43B 55%,
+    #FFE873 85%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
 }
