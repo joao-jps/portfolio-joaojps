@@ -132,12 +132,12 @@ function closeCard() {
   }, 300);
 }
 
-// ===== BOTÕES COM data-card =====
+// -- BOTÕES COM data-card --
 document.querySelectorAll(".btn-card[data-card]").forEach(btn => {
   btn.addEventListener("click", () => openCard(btn.dataset.card));
 });
 
-// ===== MENU MOBILE =====
+// -- MENU MOBILE --
 function toggleMenu() {
   document.querySelector(".nav-links").classList.toggle("open");
 }
