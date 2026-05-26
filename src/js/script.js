@@ -77,7 +77,7 @@ const cardData = {
     content: `
       <p>Site completo para um petshop fictício com páginas de serviços, produtos e contato.</p>
       <p><strong>Tecnologias:</strong> HTML, CSS</p>
-      <a href="https://github.com/SEU_USUARIO/petshop" target="_blank">Ver no GitHub →</a>
+      <a href="https://github.com/joao-jps/H-S-petshop.git" target="_blank">Ver no GitHub →</a>
     `
   },
   "proj-vinharia": {
