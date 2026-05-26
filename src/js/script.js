@@ -145,3 +145,14 @@ function toggleMenu() {
   document.querySelector(".nav-links").classList.toggle("open");
 }
 
+// Animação ao rolar (Intersection Observer)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.observe-anim').forEach(el => observer.observe(el));
