@@ -1,6 +1,8 @@
 
-// ===== DADOS DOS CARDS =====
+// -- DADOS DOS CARDS --
 const cardData = {
+
+  // Criando IDs para uso na function open card
   github: {
     title: "GitHub",
     content: `
@@ -43,7 +45,7 @@ const cardData = {
     `
   },
 
-  // SKILLS 
+  // -- SKILLS  --
   "skill-html": {
     title: "HTML",
     content: `<p>Tenho boa base em HTML semântico, estruturação de páginas e acessibilidade.</p> <p>Nível: <strong>Intermediário</strong></p>`
@@ -69,7 +71,7 @@ const cardData = {
     content: `<p>Lógica de programação, estruturas de dados, conhecimento básico de hardwares e algoritmos básicos.</p><p>Nível: <strong>Básico</strong></p>`
   },
 
-  // PROJETOS 
+  //-- PROJETOS -- 
   "proj-petshop": {
     title: "H&S Petshop",
     content: `
@@ -99,42 +101,43 @@ const cardData = {
     content: `
       <p>Projeto acadêmico focado em inovação tecnológica, apresentando a estrutura e funcionalidades do sistema <strong>Jovi Vision Core.</strong></p>
 
-      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript e integração com API REST.</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, API REST</p>
+      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, API REST.</p>
       <a href="https://github.com/joao-jps/Sprint-2-Jovi.git" target="_blank">Ver no GitHub →</a>
     `
   }
 };
 
-//  ABRIR CARD 
-function openCard(id) {
-  const data = cardData[id];
-  if (!data) return;
+// -- ABRIR CARD -- 
+function openCard(id) {     
+  const data = cardData[id];   //Pedindo ID do card q foi aberto
+  if (!data) return;           // se não existir esse id accabar a função
 
-  document.getElementById("modal-content").innerHTML = `
+
+  // Aqui eu procuro os elementos q tem o ID modal-content no html e troco o conteúdo deles pelo q está dentro do html
+  document.getElementById("modal-content").innerHTML = `   
     <h3>${data.title}</h3>
     ${data.content}
   `;
 
-  document.getElementById("overlay").style.display = "block";
-  const modal = document.getElementById("modal-card");
-  modal.style.display = "block";
-  setTimeout(() => modal.classList.add("active"), 10);
+  document.getElementById("overlay").style.display = "block";     //Transforma o display:none em display:block e faz aparecer o fundo escuro
+  const modal = document.getElementById("modal-card");            // guarda o modal card na variável
+  modal.style.display = "block";                                  // faz o modal aparecer
+  setTimeout(() => modal.classList.add("active"), 10);            // aqui adiciono uma classe no modal dentro do html e digo para esperar 10 segundos para agir, ai a classe #model-card.active do CSS entra em ação
 }
 
-// ===== FECHAR CARD =====
+// -- FECHAR CARD --
 function closeCard() {
   const modal = document.getElementById("modal-card");
-  modal.classList.remove("active");
+  modal.classList.remove("active");  // Aqui ele remove a classe active fazendo a classe do CSS parar e a animação voltar
   setTimeout(() => {
-    modal.style.display = "none";
-    document.getElementById("overlay").style.display = "none";
-  }, 300);
+    modal.style.display = "none";       // Aqui retorna ao display:none
+    document.getElementById("overlay").style.display = "none";      // retorna ao display:none
+  }, 300);   // Timeout de 300 ms ( 0.3 segundos no CSS)
 }
 
 // -- BOTÕES COM data-card --
-document.querySelectorAll(".btn-card[data-card]").forEach(btn => {
-  btn.addEventListener("click", () => openCard(btn.dataset.card));
+document.querySelectorAll(".btn-card[data-card]").forEach(btn => {       // Pega todos os botões q possuem data-card e para cada botão execute:
+  btn.addEventListener("click", () => openCard(btn.dataset.card));       // Quando clicar abre o card correspondente 
 });
 
 // -- MENU MOBILE --
