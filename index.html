@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Portfólio</title>
+
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGAÇÃO-->
+  <nav id="navbar">
+    <div class="nav-logo">Portfólio | joao-jps</div>       
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>   <!--  Menu Mobile-->
+  </nav>
+  <!-- HERO (Parte principal/Inicial)-->
+  <section id="inicio" class="hero">
+    
+<div class="hero-content">
+  <div class="hero-avatar">
+    <img src="./src/assets/imgs/1772027247264.jpg" alt="Foto de João Pedro" />
+  </div>
+  <p class="hero-greeting">Olá, eu sou</p>
+  <h1 class="hero-name">João Pedro De Souza</h1>
+  <h2 class="hero-role">Desenvolvedor Web em formação.</h2>
+  <p class="hero-desc">Apaixonado por programação, sempre buscando constante evolução.</p>
+  <div class="hero-buttons">
+    <button class="btn-card" data-card="github"><i class="fab fa-github"></i> GitHub</button>
+    <button class="btn-card" data-card="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
+    <button class="btn-card" data-card="curriculo"><i class="fas fa-file-alt"></i> Currículo</button>
+  </div>
+</div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <h2 class="section-title">Sobre Mim</h2>
+    <div class="sobre-content">
+      <div class="sobre-text">
+        <p>Olá! Sou <strong>João Pedro De Souza</strong>, Estudante de Engenharia De Software, tenho forte interesse em <strong>Desenvolvimento Web</strong></p>
+        <p>Estou em constante evolução, aprendendo novas tecnologias e buscando minha primeira oportunidade como desenvolvedor.</p>
+        <p>Tenho interesse em desenvolvimento web, resolução de problemas e criação de experiências digitais.</p>
+        <button class="btn-card" data-card="sobre-mais">Saiba mais sobre mim</button>
+      </div>
+    </div>
+  </section>
+
+  <!--  SKILLS  -->
+    <!-- UTILIZEI DA BIBLIOTECA DE ICONES FAB FA (FONT AWESOME) -->
+  <section id="skills" class="section section-alt">
+    <h2 class="section-title">Skills</h2>
+    
+    <div class="skills-grid">  
+      <!-- HTML -->
+      <div class="skill-card" onclick="openCard('skill-html')">
+        <i class="fab fa-html5" style="color: #E34F26;"></i>
+        <span>HTML</span>
+      </div>
+              <!-- CSS -->
+      <div class="skill-card" onclick="openCard('skill-css')">
+        <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+        <span>CSS</span>
+      </div>
+              <!-- JavaScript -->
+      <div class="skill-card" onclick="openCard('skill-js')">
+        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+        <span>JavaScript</span>
+      </div>
+                   <!-- Python  -->
+      <div class="skill-card" onclick="openCard('skill-python')">
+        <i class="fab fa-python python-icon"></i>
+        <span>Python</span>
+      </div>
+                <!-- Git/Github -->
+      <div class="skill-card" onclick="openCard('skill-git')">
+        <i class="fab fa-git-alt" style="color: #F05032;"></i>
+        <span>Git/GitHub</span>
+      </div>
+                <!-- C++ -->
+      <div class="skill-card" onclick="openCard('skill-cpp')">
+        <i class="fas fa-code" style="color: rgb(93, 0, 136);"></i>
+        <span>C++</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!--  PROJETOS -->
+  <section id="projetos" class="section">
+    <h2 class="section-title">Projetos</h2>
+
+    <div class="projetos-grid">
+        <!-- H&S Petshop  -->
+      <div class="projeto-card" onclick="openCard('proj-petshop')">
+        <div class="projeto-img"></div>
+        <h3>H&S Petshop</h3>
+        <p>Site completo para petshop com HTML e CSS.</p>
+        <div class="projeto-tags">
+          <span>HTML</span><span>CSS</span>
+        </div>
+      </div>
+            <!-- Vinharia Agnello Web  -->
+      <div class="projeto-card" onclick="openCard('proj-vinharia')">
+        <div class="projeto-img"></div>
+        <h3>Vinharia Agnello</h3>
+        <p>Landing page para vinharia com design elegante.</p>
+        <div class="projeto-tags">
+          <span>HTML</span><span>CSS</span><span>JS</span>
+        </div>
+      </div>
+          <!-- Vinharia Agnello JS  -->
+      <div class="projeto-card" onclick="openCard('proj-vinharia2')">
+        <div class="projeto-img"></div>
+        <h3>Vinharia Agnello(JS)</h3>
+        <p>Landing page para vinharia com design elegante.</p>
+        <div class="projeto-tags">
+          <span>HTML</span><span>CSS</span><span>JS</span>
+        </div>
+      </div>
+              <!-- Jovi Vision Core  -->
+      <div class="projeto-card" onclick="openCard('proj-Jovi')">
+        <div class="projeto-img"></div>
+        <h3>Jovi Vision Core</h3>
+        <p>Site completo para descrever um projeto de inovação para a empresa jovi.</p>
+        <div class="projeto-tags">
+          <span>JS</span><span>HTML</span><span>CSS</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+                        <!--  CONTATO -->
+  <section id="contato" class="section section-alt">
+    <h2 class="section-title">Contato</h2>
+    <p class="contato-desc">Quer conversar? Me manda uma mensagem!</p>
+    <div class="contato-links">
+      <button class="btn-card" data-card="github"><i class="fab fa-github"></i> GitHub</button>
+      <button class="btn-card" data-card="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
+      <button class="btn-card" data-card="email"><i class="fas fa-envelope"></i> E-mail</button>
+    </div>
+  </section>
+
+                       <!-- FOOTER -->
+  <footer>
+    <p>Feito por <strong>João Pedro De Souza</strong> — 2026</p>
+  </footer>
+
+                 <!-- MODAL / CARD -->
+  <div id="overlay" onclick="closeCard()"></div>
+  <div id="modal-card">
+    <button id="modal-close" onclick="closeCard()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+
+  <script src="./src/js/script.js"></script>
+</body>
+</html>
