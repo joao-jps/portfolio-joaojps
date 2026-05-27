@@ -53,7 +53,9 @@ body {
 .nav-links a {
   color: var(--text-muted);
   text-decoration: none;
+  justify-content: center;
   display: inline-block;
+  font-weight: bold;
   transition: color 0.3s, transform 0.2s ease;
 }
 
