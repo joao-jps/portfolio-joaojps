@@ -37,7 +37,7 @@ const cardData = {
   "sobre-mais": {
     title: "Mais sobre mim",
     content: `
-     <p>Tenho 18 anos e curso <strong>Engenharia de Software</strong> na <strong>FIAP</strong>, estando no <strong>1º semestre</strong>.</p>
+     <p>Tenho 18 anos e curso <strong>Engenharia de Software</strong> na <strong>FIAP</strong>, iniciando o <strong>2º semestre</strong>.</p>
 
      <p>Iniciei meus estudos em programação recentemente e desde então venho desenvolvendo projetos práticos para fortalecer minhas habilidades técnicas.</p>
 
@@ -46,21 +46,13 @@ const cardData = {
   },
 
   // -- SKILLS  --
-  "skill-html": {
-    title: "HTML",
-    content: `<p>Tenho boa base em HTML semântico, estruturação de páginas e acessibilidade.</p> <p>Nível: <strong>Intermediário</strong></p>`
-  },
-  "skill-css": {
-    title: "CSS",
-    content: `<p>Trabalho com Flexbox, Grid, animações e responsividade.</p><p>Nível: <strong>Intermediário</strong></p>`
-  },
   "skill-js": {
     title: "JavaScript",
-    content: `<p>Arrays, Objetos, Eventos, Fetch de APIs e Lógica de programação.</p><p>Nível: <strong>Intermediário</strong></p>`
+    content: `<p>Estudando Node.js para BackEnd, Bootstrap para Front-End. Arrays, Objetos, Eventos, Fetch de APIs, Lógica de programação. </p><p>Nível: <strong>Intermediário</strong></p>`
   },
   "skill-python": {
     title: "Python",
-    content: `<p>Lógica de programação, scripts e automações simples.</p><p>Nível: <strong>Básico</strong></p>`
+    content: `<p>Lógica de programação, scripts e automações simples, focando em BackEnd.</p><p>Nível: <strong>Básico</strong></p>`
   },
   "skill-git": {
     title: "Git/GitHub",
@@ -69,6 +61,29 @@ const cardData = {
   "skill-cpp": {
     title: "C++",
     content: `<p>Lógica de programação, estruturas de dados, conhecimento básico de hardwares e algoritmos básicos.</p><p>Nível: <strong>Básico</strong></p>`
+  },
+  // NOVOS: Java, Spring Boot, POO
+  "skill-java": {
+    title: "Java",
+    content: `
+      <p>Desenvolvimento back-end com Java, aplicando lógica de programação, estruturas de controle e orientação a objetos.</p>
+      <p>Nível: <strong>Básico</strong></p>
+    `
+  },
+  "skill-spring": {
+    title: "Spring Boot",
+    content: `
+      <p>(Atualmente Estudando) Criação de aplicações back-end com Spring Boot, incluindo estrutura de projetos, endpoints REST e integração com banco de dados.</p>
+      <p>Nível: <strong>Básico / Em desenvolvimento</strong></p>
+    `
+  },
+  "skill-poo": {
+    title: "POO — Programação Orientada a Objetos",
+    content: `
+      <p>Aplicação dos pilares da orientação a objetos: encapsulamento, herança, polimorfismo e abstração.</p>
+      <p>Praticado principalmente em Java, com foco em organização e reutilização de código.</p>
+      <p>Nível: <strong>Básico / Em desenvolvimento</strong></p>
+    `
   },
 
   //-- PROJETOS -- 
@@ -103,6 +118,25 @@ const cardData = {
 
       <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, API REST.</p>
       <a href="https://github.com/joao-jps/Sprint-2-Jovi.git" target="_blank">Ver no GitHub →</a>
+    `
+  },
+  // NOVOS: Task Manager e OrbitMax Sentinel
+  "proj-taskmanager": {
+    title: "Task Manager",
+    content: `
+      <p>Aplicação back-end para gerenciamento de tarefas, desenvolvida em <strong>Java</strong>.</p>
+      <p>Aplica conceitos de <strong>POO</strong> e separação de responsabilidades. (Atualmente em desenvolvimento)</p>
+      <p><strong>Tecnologias:</strong> Java </p>
+      <a href="https://github.com/joao-jps/portfolio-joaojps" target="_blank">Ver no GitHub →</a>
+    `
+  },
+  "proj-orbitmax": {
+    title: "OrbitMax Sentinel",
+    content: `
+      <p>Sistema de detecção de queimadas via satélite desenvolvido como projeto acadêmico na <strong>FIAP</strong> (Global Solution 2026 — 1º semestre).</p>
+      <p>Interface web visualmente agradável, animações em <strong>Canvas API</strong>, scroll effects e design totalmente responsivo.</p>
+      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+      <a href="https://github.com/joao-jps/Landing-Page-OrbitMax-Sentinel.git" target="_blank">Ver no GitHub →</a>
     `
   }
 };
