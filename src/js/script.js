@@ -138,7 +138,17 @@ const cardData = {
       <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
       <a href="https://github.com/joao-jps/Landing-Page-OrbitMax-Sentinel.git" target="_blank">Ver no GitHub →</a>
     `
-  }
+  },
+
+  // -- IDIOMAS --
+  "lang-pt": {
+    title: "Português",
+    content: `<p>Idioma nativo, usado no dia a dia e em toda a comunicação acadêmica.</p><p>Nível: <strong>Nativo</strong></p>`
+  },
+  "lang-en": {
+    title: "Inglês",
+    content: `<p>Boa fluência em leitura, escrita e conversação técnica — Possuo Experiência em conversação com estrangeiros.</p><p>Nível: <strong>Fluente</strong></p>`
+  },
 };
 
 // -- ABRIR CARD -- 
