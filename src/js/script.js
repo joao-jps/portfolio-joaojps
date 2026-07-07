@@ -23,7 +23,7 @@ const cardData = {
     title: "Currículo",
     content: `
       <p>Confira meu currículo completo!</p>
-      <a href="./src/assets/CV_JPS (4).pdf" download>Baixar Currículo →</a>
+      <a href="./src/assets/imgs/CV_JPS (4).pdf" download>Baixar Currículo →</a>
     `
   },
   email: {
