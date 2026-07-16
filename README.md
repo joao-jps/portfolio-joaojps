@@ -46,14 +46,19 @@ O projeto foi criado utilizando **HTML5**, **CSS3** e **JavaScript**, focando em
 
 ## 💻 Projetos Apresentados
 
-### 🐾 H&S Petshop
-Site fictício para petshop desenvolvido com HTML e CSS.
+### 📄 Sistema Folha de Pagamento
+Sistema de console desenvolvido em Java para gerenciamento de funcionários e cálculo de folha de pagamento, aplicando os principais conceitos de Programação Orientada a Objetos.
 
-### 🍷 Vinharia Agnello
+Este projeto foi criado com fins de estudo, simulando um sistema real de RH com cadastro de funcionários, cálculo de salários com regras específicas por cargo, controle de horas extras e geração de relatórios
+
+### 🍷 Vinharia Agnello (JS)
 Landing page elegante com foco em design e experiência visual.
 
-### 🍇 Vinharia Agnello (JS)
 Versão com funcionalidades JavaScript e sistema de informações dos vinhos.
+
+### 🌍 OrbitMax Sentinel
+Landing page desenvolvida para a Global Solution 2026 da FIAP — Engenharia de Software, 1º Ano.
+O projeto conecta dados abertos da NASA e do INPE a alertas úteis para comunidades e gestores públicos brasileiros.
 
 ### 🚀 Jovi Vision Core
 Projeto acadêmico focado em inovação tecnológica utilizando API REST.
