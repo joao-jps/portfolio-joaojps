@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meu Portfólio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css"/>
 </head>
 <body>
 
@@ -17,8 +21,8 @@
       <li><a href="#inicio">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#idiomas">Idiomas</a></li>
       <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#idiomas">Idiomas</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -47,9 +51,9 @@
     <h2 class="section-title observe-anim d0">Sobre Mim</h2>
     <div class="sobre-content">
       <div class="sobre-text observe-anim d1">
-        <p>Olá! Sou <strong>João Pedro De Souza</strong>, Estudante de Engenharia De Software, tenho forte interesse em <strong>Desenvolvimento Web</strong></p>
-        <p>Estou em constante evolução, aprendendo novas tecnologias e buscando minha primeira oportunidade como desenvolvedor.</p>
-        <p>Tenho interesse em desenvolvimento web, resolução de problemas e criação de experiências digitais.</p>
+        <p>Olá! Sou <strong>João Pedro De Souza</strong>, Estudante de Engenharia de Software com foco em <strong>Back-End</strong>.</p>
+        <p>Tenho o objetivo de atuar como Desenvolvedor <strong>Back-End </strong> com <strong>Java</strong>. Estou focado principalmente em <strong>Java + Spring</strong>, aprofundando meus estudos em <strong>SQL</strong> e, no futuro, pretendo estudar <strong>AWS</strong> para atuar também com infraestrutura em nuvem aliado ao desenvolvimento Back-End.</p>
+        <p>Estou em constante evolução, buscando minha primeira oportunidade como desenvolvedor e novas tecnologias para fortalecer minhas habilidades técnicas.</p>
         <button class="btn-card" data-card="sobre-mais">Saiba mais sobre mim</button>
       </div>
     </div>
@@ -58,8 +62,10 @@
   <!-- SKILLS -->
   <section id="skills" class="section section-alt">
     <h2 class="section-title observe-anim d0">Skills</h2>
+
+    <!-- LINGUAGENS -->
+    <h3 class="skills-subtitle observe-anim d1">Linguagens</h3>
     <div class="skills-grid observe-anim d1">
-     
       <div class="skill-card" onclick="openCard('skill-js')">
         <i class="fab fa-js" style="color: #F7DF1E;"></i>
         <span>JavaScript</span>
@@ -70,30 +76,37 @@
         <span>Python</span>
       </div>
 
-      <div class="skill-card" onclick="openCard('skill-git')">
-        <i class="fab fa-git-alt" style="color: #F05032;"></i>
-        <span>Git/GitHub</span>
-      </div>
-
       <div class="skill-card" onclick="openCard('skill-cpp')">
         <i class="fas fa-code" style="color: rgb(93, 0, 136);"></i>
         <span>C++</span>
       </div>
 
-      <!-- NOVO: Java -->
-      <div class="skill-card" onclick="openCard('skill-java')">
+      <div class="skill-card has-framework" onclick="openCard('skill-java')">
         <i class="fab fa-java" style="color: #ED8B00;"></i>
         <span>Java</span>
       </div>
-      <!-- NOVO: Spring Boot -->
-      <div class="skill-card" onclick="openCard('skill-spring')">
-        <i class="fas fa-leaf" style="color: #6DB33F;"></i>
-        <span>Spring Boot</span>
+    </div>
+
+    <!-- SKILLS (ferramentas/práticas) -->
+    <h3 class="skills-subtitle observe-anim d2">Skills</h3>
+    <div class="skills-grid observe-anim d2">
+      <div class="skill-card" onclick="openCard('skill-git')">
+        <i class="fab fa-git-alt" style="color: #F05032;"></i>
+        <span>Git/GitHub</span>
       </div>
-      <!-- NOVO: POO -->
+
       <div class="skill-card" onclick="openCard('skill-poo')">
         <i class="fas fa-cubes" style="color: #3b82f6;"></i>
         <span>POO</span>
+      </div>
+    </div>
+
+    <!-- BANCO DE DADOS -->
+    <h3 class="skills-subtitle observe-anim d3">Banco de Dados</h3>
+    <div class="skills-grid observe-anim d3">
+      <div class="skill-card" onclick="openCard('skill-sql')">
+        <i class="fas fa-database" style="color: #3b82f6;"></i>
+        <span>SQL</span>
       </div>
     </div>
   </section>
@@ -101,93 +114,115 @@
   <!-- PROJETOS -->
   <section id="projetos" class="section">
     <h2 class="section-title observe-anim d0">Projetos</h2>
-    <div class="projetos-grid observe-anim d1">
-      <div class="projeto-card" onclick="openCard('proj-petshop')">
-        <div class="projeto-img"></div>
-        <h3>H&S Petshop</h3>
-        <p>Site completo para petshop com HTML e CSS.</p>
-        <div class="projeto-tags">
-          <span>HTML</span><span>CSS</span>
-        </div>
-      </div>
-      <div class="projeto-card" onclick="openCard('proj-vinharia')">
-        <div class="projeto-img"></div>
-        <h3>Vinharia Agnello</h3>
-        <p>Landing page para vinharia com design elegante.</p>
-        <div class="projeto-tags">
-          <span>HTML</span><span>CSS</span><span>JS</span>
-        </div>
-      </div>
-      <div class="projeto-card" onclick="openCard('proj-vinharia2')">
-        <div class="projeto-img"></div>
-        <h3>Vinharia Agnello(JS)</h3>
-        <p>Landing page para vinharia com design elegante.</p>
-        <div class="projeto-tags">
-          <span>HTML</span><span>CSS</span><span>JS</span>
-        </div>
-      </div>
-      <div class="projeto-card" onclick="openCard('proj-Jovi')">
-        <div class="projeto-img"></div>
-        <h3>Jovi Vision Core</h3>
-        <p>Site completo para descrever um projeto de inovação para a empresa jovi.</p>
-        <div class="projeto-tags">
-          <span>JS</span><span>HTML</span><span>CSS</span>
-        </div>
-      </div>
-      <!-- NOVO: Task Manager -->
 
-      <div class="projeto-card" onclick="openCard('proj-taskmanager')">
-        <div class="projeto-img"></div>
-        <h3>Task Manager</h3>
-        <p>Aplicação back-end para gerenciamento de tarefas com Java e POO.</p>
-        <div class="projeto-tags">
-          <span>Java</span>
+    <div class="projetos-tabs observe-anim d1">
+      <button class="tab-btn active" data-tab="frontend" onclick="switchTab('frontend')">Front-End</button>
+      <button class="tab-btn" data-tab="backend" onclick="switchTab('backend')">Back-End</button>
+    </div>
+
+    <!-- FRONT-END -->
+    <div class="projetos-panel observe-anim d2" data-panel="frontend">
+      <div class="slideshow">
+        <button class="slide-arrow slide-prev" onclick="prevSlide()" aria-label="Projeto anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="slide-viewport">
+          <div class="slide-track" id="slide-track">
+
+          
+            <div class="slide">
+              <div class="slide-visual" data-visual="vinharia2"></div>
+              <div class="slide-info">
+                <span class="slide-category">Front-End</span>
+                <h3>Vinharia Agnello (JS)</h3>
+                <p>Evolução do projeto anterior com a adição de interatividade via JavaScript: sistema dinâmico de exibição das informações de cada vinho (safra, harmonização e região), manipulando o DOM em tempo real a partir da seleção do usuário.</p>
+                <div class="projeto-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                <a class="btn-card" href="https://github.com/joao-jps/vinheria-agnello-checkpoint03.git" target="_blank">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-visual" data-visual="jovi"></div>
+              <div class="slide-info">
+                <span class="slide-category">Front-End</span>
+                <h3>Jovi Vision Core</h3>
+                <p>Site institucional criado para apresentar um projeto de inovação tecnológica da empresa Jovi. Consome dados de uma API REST para exibir o conteúdo dinamicamente, com seções estruturadas para storytelling do produto.</p>
+                <div class="projeto-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>API REST</span></div>
+                <a class="btn-card" href="https://github.com/joao-jps/Sprint-2-Jovi.git" target="_blank">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-visual" data-visual="orbitmax"></div>
+              <div class="slide-info">
+                <span class="slide-category">Front-End</span>
+                <h3>OrbitMax Sentinel</h3>
+                <p>Projeto acadêmico (FIAP — Global Solution) de um sistema de monitoramento de queimadas via satélite. Interface com animações em Canvas API, efeitos de scroll e visualização de dados geoespaciais em um design totalmente responsivo.</p>
+                <div class="projeto-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Canvas API</span></div>
+                <a class="btn-card" href="https://github.com/joao-jps/Landing-Page-OrbitMax-Sentinel.git" target="_blank">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
         </div>
+
+        <button class="slide-arrow slide-next" onclick="nextSlide()" aria-label="Próximo projeto">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
 
-      <!-- NOVO: OrbitMax Sentinel -->
-      <div class="projeto-card" onclick="openCard('proj-orbitmax')">
-        <div class="projeto-img"></div>
-        <h3>OrbitMax Sentinel</h3>
-        <p>Sistema de detecção de queimadas via APIs de satélite. Projeto acadêmico FIAP.</p>
-        <div class="projeto-tags">
-          <span>HTML</span><span>CSS</span><span>JS</span>
+      <div class="slide-dots" id="slide-dots"></div>
+    </div>
+
+    <!-- BACK-END -->
+    <div class="projetos-panel" data-panel="backend" hidden>
+      <div class="slideshow single-project">
+        <div class="slide-viewport">
+          <div class="slide">
+            <div class="slide-info">
+              <span class="slide-category">Back-End</span>
+              <h3>Sistema de Folha de Pagamento</h3>
+              <p>Sistema de console em Java para gerenciamento de funcionários e cálculo de folha de pagamento, simulando um sistema real de RH: cadastro de Gerente, Vendedor e Estagiário, cálculo de salário com regras de bônus específicas por cargo, controle de horas extras (meta de 220h/mês) e geração de relatório completo.</p>
+              <p>Aplica os quatro pilares da POO: abstração (classe abstrata <strong>Funcionario</strong>), herança (subclasses especializadas), polimorfismo (cálculo de salário sobrescrito por cargo) e encapsulamento, além de separar a interface de console da regra de negócio.</p>
+              <div class="projeto-tags"><span>Java</span><span>POO</span><span>Console App</span></div>
+              <a class="btn-card" href="https://github.com/joao-jps/sistema-folha-de-pagamento-java" target="_blank">Acessar Projeto <i class="fas fa-arrow-right"></i></a>
+              <a class="btn-card" href="https://www.linkedin.com/posts/joaojps_java-programaaexaetoorientadaaobjetos-poo-activity-7481880452807491584-LVeF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGTsltUByaEJ1eFDq4h9PBARauwtGj4hdmg" target="_blank">Acessar Publicação no LinkedIn</a>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
+
+  <!-- IDIOMAS -->
+  <section id="idiomas" class="section section-alt">
+    <h2 class="section-title observe-anim d0">Idiomas</h2>
+    <div class="skills-grid observe-anim d1">
+
+      <div class="skill-card lang-card" onclick="openCard('lang-pt')">
+        <span class="fi fi-br fis lang-flag"></span>
+        <span>Português</span>
+        <div class="lang-level"><div class="lang-level-fill" style="width: 100%;"></div></div>
+      </div>
+
+      <div class="skill-card lang-card" onclick="openCard('lang-en')">
+        <span class="fi fi-us fis lang-flag"></span>
+        <span>Inglês</span>
+        <div class="lang-level"><div class="lang-level-fill" style="width: 90%;"></div></div>
+      </div>
+
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="section section-alt">
+  <section id="contato" class="section">
     <h2 class="section-title observe-anim d0">Contato</h2>
     <p class="contato-desc observe-anim d1">Quer conversar? Me manda uma mensagem!</p>
     <div class="contato-links observe-anim d2">
       <button class="btn-card" data-card="github"><i class="fab fa-github"></i> GitHub</button>
       <button class="btn-card" data-card="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
       <button class="btn-card" data-card="email"><i class="fas fa-envelope"></i> E-mail</button>
-    </div>
-  </section>
-
-  <!-- IDIOMAS -->
-  <section id="idiomas" class="section">
-    <h2 class="section-title observe-anim d0">Idiomas</h2>
-    <div class="skills-grid observe-anim d1">
-
-      <div class="skill-card lang-card" onclick="openCard('lang-pt')">
-        <span class="lang-flag">🇧🇷</span>
-        <span>Português</span>
-        <div class="lang-level"><div class="lang-level-fill" style="width: 100%;"></div></div>
-      </div>
-
-      <div class="skill-card lang-card" onclick="openCard('lang-en')">
-        <span class="lang-flag">🇺🇸</span>
-        <span>Inglês</span>
-        <div class="lang-level"><div class="lang-level-fill" style="width: 90%;"></div></div>
-      </div>
-
     </div>
   </section>
 
