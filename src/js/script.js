@@ -1,4 +1,3 @@
-
 // -- DADOS DOS CARDS --
 const cardData = {
 
@@ -37,12 +36,13 @@ const cardData = {
   "sobre-mais": {
     title: "Mais sobre mim",
     content: `
-     <p>Tenho 18 anos e curso <strong>Engenharia de Software</strong> na <strong>FIAP</strong>, iniciando o <strong>2º semestre</strong>.</p>
+     <p>Tenho 18 anos e curso <strong>Engenharia de Software</strong> na <strong>FIAP</strong>, atualmente no <strong>2º semestre</strong>.</p>
 
-     <p>Iniciei meus estudos em programação recentemente e desde então venho desenvolvendo projetos práticos para fortalecer minhas habilidades técnicas.</p>
+    <p>Estou focado em <strong>Desenvolvimento Back-End</strong>, estudando principalmente <strong>Java, Spring Boot</strong> e <strong>SQL</strong>, com interesse em <strong>Cloud Computing (AWS)</strong> para atuar com infraestrutura e aplicações escaláveis.</p>
 
-     <p>Busco minha primeira oportunidade de estágio na área de tecnologia, com foco em <strong>Desenvolvimento Web</strong> e aprendizado contínuo.</p>
-    `
+    <p>Desenvolvo projetos práticos para consolidar meus conhecimentos, aplicando conceitos de APIs REST, bancos de dados, Git/GitHub e boas práticas de desenvolvimento.</p>
+
+    <p>Busco minha primeira oportunidade para evoluir profissionalmente, contribuir com projetos reais e continuar aprendendo na área de tecnologia.</p>`
   },
 
   // -- SKILLS  --
@@ -62,19 +62,18 @@ const cardData = {
     title: "C++",
     content: `<p>Lógica de programação, estruturas de dados, conhecimento básico de hardwares e algoritmos básicos.</p><p>Nível: <strong>Básico</strong></p>`
   },
-  // NOVOS: Java, Spring Boot, POO
+  // NOVOS: Java, Spring Boot (aninhado), POO
   "skill-java": {
     title: "Java",
     content: `
       <p>Desenvolvimento back-end com Java, aplicando lógica de programação, estruturas de controle e orientação a objetos.</p>
       <p>Nível: <strong>Básico</strong></p>
-    `
-  },
-  "skill-spring": {
-    title: "Spring Boot",
-    content: `
-      <p>(Atualmente Estudando) Criação de aplicações back-end com Spring Boot, incluindo estrutura de projetos, endpoints REST e integração com banco de dados.</p>
-      <p>Nível: <strong>Básico / Em desenvolvimento</strong></p>
+
+      <div class="framework-block">
+        <p><strong>Frameworks utilizados:</strong></p>
+        <span class="framework-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+        <p>(Atualmente estudando) Criação de aplicações back-end com Spring Boot: estrutura de projetos, endpoints REST e integração com banco de dados.</p>
+      </div>
     `
   },
   "skill-poo": {
@@ -85,29 +84,29 @@ const cardData = {
       <p>Nível: <strong>Básico / Em desenvolvimento</strong></p>
     `
   },
-
-  //-- PROJETOS -- 
-  "proj-petshop": {
-    title: "H&S Petshop",
+  // NOVO: Banco de Dados
+  "skill-sql": {
+    title: "SQL",
     content: `
-      <p>Site completo para um petshop fictício com páginas de serviços, produtos e contato.</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS</p>
-      <a href="https://github.com/joao-jps/H-S-petshop.git" target="_blank">Ver no GitHub →</a>
+      <p>Consultas, criação de tabelas e modelagem básica de banco de dados relacional.</p>
+      <p>Nível: <strong>Básico</strong></p>
     `
   },
+
+  //-- PROJETOS -- 
   "proj-vinharia": {
     title: "Vinharia Agnello",
     content: `
-      <p>Landing page elegante para uma vinharia com foco em design e tipografia.</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS, JS</p>
+      <p>Landing page desenvolvida para uma vinharia fictícia, com foco em tipografia refinada e apresentação elegante dos produtos.</p>
+      <p><strong>Tecnologias:</strong> HTML5, CSS3</p>
       <a href="https://github.com/joao-jps/CP2-Vinharia-Agnello.git" target="_blank">Ver no GitHub →</a>
     `
   },
   "proj-vinharia2": {
     title: "Vinharia Agnello (JS)",
     content: `
-      <p>Vinharia Agnello com foco no sistema de informação dos vinhos utilizando de JS</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS, JS</p>
+      <p>Evolução do projeto anterior, com sistema dinâmico de exibição de informações dos vinhos utilizando JavaScript.</p>
+      <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript</p>
       <a href="https://github.com/joao-jps/vinheria-agnello-checkpoint03.git" target="_blank">Ver no GitHub →</a>
     `
   },
@@ -116,18 +115,8 @@ const cardData = {
     content: `
       <p>Projeto acadêmico focado em inovação tecnológica, apresentando a estrutura e funcionalidades do sistema <strong>Jovi Vision Core.</strong></p>
 
-      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, API REST.</p>
+      <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript, API REST.</p>
       <a href="https://github.com/joao-jps/Sprint-2-Jovi.git" target="_blank">Ver no GitHub →</a>
-    `
-  },
-  // NOVOS: Task Manager e OrbitMax Sentinel
-  "proj-taskmanager": {
-    title: "Task Manager",
-    content: `
-      <p>Aplicação back-end para gerenciamento de tarefas, desenvolvida em <strong>Java</strong>.</p>
-      <p>Aplica conceitos de <strong>POO</strong> e separação de responsabilidades. (Atualmente em desenvolvimento)</p>
-      <p><strong>Tecnologias:</strong> Java </p>
-      <a href="https://github.com/joao-jps/portfolio-joaojps" target="_blank">Ver no GitHub →</a>
     `
   },
   "proj-orbitmax": {
@@ -135,7 +124,7 @@ const cardData = {
     content: `
       <p>Sistema de detecção de queimadas via satélite desenvolvido como projeto acadêmico na <strong>FIAP</strong> (Global Solution 2026 — 1º semestre).</p>
       <p>Interface web visualmente agradável, animações em <strong>Canvas API</strong>, scroll effects e design totalmente responsivo.</p>
-      <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+      <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript, Canvas API</p>
       <a href="https://github.com/joao-jps/Landing-Page-OrbitMax-Sentinel.git" target="_blank">Ver no GitHub →</a>
     `
   },
@@ -188,6 +177,79 @@ document.querySelectorAll(".btn-card[data-card]").forEach(btn => {       // Pega
 function toggleMenu() {
   document.querySelector(".nav-links").classList.toggle("open");
 }
+
+// -- ABAS DE PROJETOS (Front-End / Back-End) --
+function switchTab(tab) {
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.tab === tab);
+  });
+  document.querySelectorAll(".projetos-panel").forEach(panel => {
+    panel.hidden = panel.dataset.panel !== tab;
+  });
+}
+
+// -- SLIDESHOW DE PROJETOS --
+const track = document.getElementById("slide-track");
+const dotsWrap = document.getElementById("slide-dots");
+const slides = track ? Array.from(track.children) : [];
+let currentSlide = 0;
+
+// Cria os pontinhos (dots) de navegação, um para cada projeto
+if (dotsWrap) {
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.className = "slide-dot";
+    dot.setAttribute("aria-label", `Ir para o projeto ${i + 1}`);
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsWrap.appendChild(dot);
+  });
+}
+const dots = dotsWrap ? Array.from(dotsWrap.children) : [];
+
+// Atualiza a posição do track e o estado visual dos dots
+function updateSlide() {
+  if (!track) return;
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === currentSlide));
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateSlide();
+}
+
+// Suporte a arraste/swipe (mouse e touch) para "passar o lado" e ver outros projetos
+if (track) {
+  let startX = 0;
+  let isDragging = false;
+
+  const dragStart = (x) => { startX = x; isDragging = true; };
+  const dragEnd = (x) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - x;
+    if (Math.abs(diff) > 50) { // arraste mínimo para trocar de slide
+      diff > 0 ? nextSlide() : prevSlide();
+    }
+  };
+
+  track.addEventListener("touchstart", (e) => dragStart(e.touches[0].clientX));
+  track.addEventListener("touchend", (e) => dragEnd(e.changedTouches[0].clientX));
+  track.addEventListener("mousedown", (e) => dragStart(e.clientX));
+  track.addEventListener("mouseup", (e) => dragEnd(e.clientX));
+}
+
+updateSlide();
 
 // Animação ao rolar (Intersection Observer)
 const observer = new IntersectionObserver((entries) => {
