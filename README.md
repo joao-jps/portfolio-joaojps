@@ -69,3 +69,7 @@ Este projeto foi desenvolvido com as seguintes ferramentas e bibliotecas:
 ├── package.json     # Gerenciamento de dependências e scripts
 ├── README.md        # Documentação do repositório
 └── vite.config.js   # Configuração de build do Vite
+---
+
+## Link do Repositório para clonar:
+git clone https://github.com/joao-jps/portfolio-joaojps.git
