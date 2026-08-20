@@ -1,85 +1,71 @@
-# 🚀 Portfólio Pessoal — João Pedro De Souza
+<div align="center">
+
+  # 🚀 Portfolio | joaojps
+
+  <p align="center">
+    Uma aplicação web moderna desenvolvida em React para organização de projetos e apresentação profissional].
+  </p>
+
+  <p align="center">
+    <a href="#-sobre-o-projeto">Sobre</a> •
+    <a href="#-tecnologias-utilizadas">Tecnologias</a> •
+    <a href="#-funcionalidades">Funcionalidades</a> •
+    <a href="#-como-executar-o-projeto">Como Executar</a> •
+    <a href="#-autor">Autor</a>
+  </p>
+
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" />
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge" />
+  </p>
+
+</div>
+
+---
 
 ## 📌 Sobre o Projeto
 
-Este é meu portfólio pessoal e profissional desenvolvido com o objetivo de apresentar minhas habilidades, projetos e trajetória como estudante de Engenharia de Software.
+O **portfólio** foi construído com o objetivo de consolidar meu portfólio de projetos, aplicando boas práticas de componentização, estilização moderna e otimização de performance no ecossistema React].
 
-O projeto foi criado utilizando **HTML5**, **CSS3** e **JavaScript**, focando em um visual moderno, responsivo e interativo.
+A aplicação conta com uma interface responsiva, código limpo e estruturado seguindo os padrões do mercado.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+Este projeto foi desenvolvido com as seguintes ferramentas e bibliotecas:
+
+- **[React](https://reactjs.org/)** — Biblioteca para construção de interfaces dinâmicas
+- **[Vite](https://vitejs.dev/)** — Build tool ultra-rápida para aplicações web
+- **[JavaScript (ES6+)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)** — Linguagem base da aplicação
+- **[CSS3 / Modules](https://developer.mozilla.org/pt-BR/docs/Web/CSS)** — Estilização moderna e modularizada
+- **[ESLint](https://eslint.org/)** — Padronização e qualidade de código
+- **[Git & GitHub](https://github.com/)** — Versionamento e hospedagem de código
 
 ---
 
 ## ✨ Funcionalidades
 
-✔ Navegação responsiva  
-✔ Menu mobile  
-✔ Modais interativos  
-✔ Sessão de projetos  
-✔ Sessão de skills  
-✔ Links para GitHub, LinkedIn e currículo  
-✔ Layout moderno em tema dark  
-✔ Responsividade para dispositivos móveis  
-
+- [x] **Design Responsivo:** Adaptado para dispositivos móveis, tablets e desktops.
+- [x] **Componentização Limpa:** Estrutura reutilizável e de fácil manutenção.
+- [x] **Performance Otimizada:** Carregamento rápido alimentado pelo Vite.
 ---
 
-## 🛠 Tecnologias Utilizadas
+## 📂 Estrutura do Projeto
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
-- Git & GitHub
-
----
-
-## 📚 Conceitos Praticados
-
-- Estruturação semântica
-- Flexbox
-- CSS Grid
-- Responsividade
-- Manipulação do DOM
-- Eventos em JavaScript
-- Modais dinâmicos
-- UX/UI básica
-
----
-
-## 💻 Projetos Apresentados
-
-### 📄 Sistema Folha de Pagamento
-Sistema de console desenvolvido em Java para gerenciamento de funcionários e cálculo de folha de pagamento, aplicando os principais conceitos de Programação Orientada a Objetos.
-
-Este projeto foi criado com fins de estudo, simulando um sistema real de RH com cadastro de funcionários, cálculo de salários com regras específicas por cargo, controle de horas extras e geração de relatórios
-
-### 🍷 Vinharia Agnello (JS)
-Landing page elegante com foco em design e experiência visual.
-
-Versão com funcionalidades JavaScript e sistema de informações dos vinhos.
-
-### 🌍 OrbitMax Sentinel
-Landing page desenvolvida para a Global Solution 2026 da FIAP — Engenharia de Software, 1º Ano.
-O projeto conecta dados abertos da NASA e do INPE a alertas úteis para comunidades e gestores públicos brasileiros.
-
-### 🚀 Jovi Vision Core
-Projeto acadêmico focado em inovação tecnológica utilizando API REST.
-
----
-
-## 🎯 Objetivo
-
-Tenho grande interesse em desenvolvimento **Full Stack** e desenvolvi este projeto também com o objetivo de fortalecer e aplicar minhas habilidades pessoais, práticas e técnicas no desenvolvimento front-end, organização de código, responsividade e interatividade utilizando JavaScript.
-
-Atualmente estou buscando minha primeira oportunidade de estágio na área de tecnologia, com foco em Desenvolvimento Web, aprendizado contínuo e evolução profissional.
----
-
-## 📬 Contato
-
-📧 Email: **jujp.souza@gmail.com**  
-💼 LinkedIn: **linkedin.com/in/joaojps**  
-🐙 GitHub: **github.com/joao-jps**
-
----
-
-## 👨‍💻 Autor
-
-Feito por **João Pedro De Souza**
+```text
+├── public/          # Arquivos estáticos e assets globais
+├── src/
+│   ├── assets/      # Imagens e ícones locais
+│   ├── components/  # Componentes reutilizáveis da interface
+│   ├── styles/      # Arquivos de estilização (CSS)
+│   ├── App.jsx      # Componente principal da aplicação
+│   └── main.jsx     # Ponto de entrada do React
+├── .gitignore       # Arquivos e pastas ignorados pelo Git
+├── eslint.config.js # Configurações de padronização do ESLint
+├── index.html       # Estrutura base do documento HTML
+├── package.json     # Gerenciamento de dependências e scripts
+├── README.md        # Documentação do repositório
+└── vite.config.js   # Configuração de build do Vite
