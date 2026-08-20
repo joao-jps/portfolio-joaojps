@@ -922,7 +922,7 @@ export default function Portfolio() {
       </section>
 
       <section id="projetos">
-        <SectionLabel title="Projetos tecnicos" />
+        <SectionLabel title="Projetos técnicos" />
         <ProjectCarousel />
       </section>
 
@@ -949,7 +949,7 @@ export default function Portfolio() {
       </section>
 
       <section id="formacao">
-        <SectionLabel title="Formacao e competencias" />
+        <SectionLabel title="Formação e competências" />
         <div className="edu-list">
           <div className="edu-item">
             <GraduationCap size={20} className="edu-icon" />
