@@ -1,10 +1,24 @@
 import { projects } from './projects.js'
 
+/** Render a small inline SVG icon so the interface needs no icon-font request. */
 function Icon({ name, size = 16 }) {
-  const paths = { down: <path d="M12 5v14m-7-7 7 7 7-7"/>, right: <path d="M5 12h14m-7-7 7 7-7 7"/>, up: <path d="M7 17 17 7M7 7h10v10"/>, github: <><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 3.77 5.07 5.07 0 0 0 18.91 0S17.73-.35 15 1.48a13.38 13.38 0 0 0-7 0C5.27-.35 4.09 0 4.09 0A5.07 5.07 0 0 0 4 3.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 17.13V21" transform="translate(1 1) scale(.9)"/></> }
-  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name] || paths.up}</svg>
+  const paths = {
+    down: <path d="M12 5v14m-7-7 7 7 7-7" />,
+    right: <path d="M5 12h14m-7-7 7 7-7 7" />,
+    up: <path d="M7 17 17 7M7 7h10v10" />,
+    github: <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 3.77 5.07 5.07 0 0 0 18.91 0S17.73-.35 15 1.48a13.38 13.38 0 0 0-7 0C5.27-.35 4.09 0 4.09 0A5.07 5.07 0 0 0 4 3.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 17.13V21" transform="translate(1 1) scale(.9)" />,
+    linkedin: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></>,
+    mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></>,
+  }
+
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {paths[name] || paths.up}
+    </svg>
+  )
 }
 
+/** A project preview card. Project content and destination live in src/projects.js. */
 function ProjectCard({ project }) {
   return (
     <article className="project-card group">
@@ -21,25 +35,76 @@ function ProjectCard({ project }) {
       <div className="project-info">
         <div className="project-heading"><h3>{project.title}</h3><span className={`status ${project.status === 'Concluído' ? 'complete' : ''}`}><i/>{project.status}</span></div>
         <p>{project.description}</p>
-        <div className="project-bottom"><div className="tags">{project.stack.map(item => <span key={item}>{item}</span>)}</div><a className="repo-link" href={project.github} target="_blank" rel="noreferrer"><Icon name="github" size={15}/> GitHub <Icon name="up" size={13}/></a></div>
+        <div className="project-bottom">
+          <div className="tags">{project.stack.map(item => <span key={item}>{item}</span>)}</div>
+          <a className="repo-link" href={project.github} target="_blank" rel="noreferrer"><Icon name="github" size={15}/> GitHub <Icon name="up" size={13}/></a>
+        </div>
       </div>
     </article>
   )
 }
 
+/** Primary social destinations shown as labeled, keyboard-accessible contact links. */
+function ContactLinks() {
+  return (
+    <div className="contact-links" aria-label="Links de contato">
+      <a className="contact-link" href="https://github.com/joao-jps" target="_blank" rel="noreferrer">
+        <Icon name="github" size={18}/><span><small>PROJETOS E CÓDIGO</small>GitHub</span><Icon name="up" size={15}/>
+      </a>
+      <a className="contact-link" href="https://www.linkedin.com/in/joaojps/" target="_blank" rel="noreferrer">
+        <Icon name="linkedin" size={18}/><span><small>VAMOS NOS CONECTAR</small>LinkedIn</span><Icon name="up" size={15}/>
+      </a>
+      <a className="contact-link" href="mailto:jujpsouza@gmail.com">
+        <Icon name="mail" size={18}/><span><small>MANDE UMA MENSAGEM</small>E-mail <span className="contact-address">jujpsouza@gmail.com</span></span><Icon name="up" size={15}/>
+      </a>
+    </div>
+  )
+}
+
+/** Single-page portfolio entry point and section layout. */
 export default function Portfolio() {
   return <>
-    <header className="nav-wrap"><nav className="nav shell"><a href="#inicio" className="wordmark" aria-label="João Paulo Santos, início"><span className="mark">JP</span><span>João Paulo Santos<small>DESENVOLVEDOR BACKEND</small></span></a><div className="nav-links"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div><div className="resume-links"><a href="/cv/resume-jpss.pdf" download>Resume <Icon name="down" size={13}/></a><a href="/cv/cv-jps.pdf" download>CV <Icon name="down" size={13}/></a></div><a className="mobile-contact" href="#contato"><Icon name="right" size={19}/></a></nav></header>
+    <header className="nav-wrap">
+      <nav className="nav shell">
+        <a href="#inicio" className="wordmark" aria-label="João Pedro De Souza, início">
+          <span className="mark">JP</span><span>João Pedro De Souza<small>ENGENHARIA DE SOFTWARE · BACKEND</small></span>
+        </a>
+        <div className="nav-links"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div>
+        <div className="resume-links"><a href="/cv/resume-jpss.pdf" download>Resume <Icon name="down" size={13}/></a><a href="/cv/cv-jps.pdf" download>CV <Icon name="down" size={13}/></a></div>
+        <a className="mobile-contact" href="#contato" aria-label="Ver contatos"><Icon name="right" size={19}/></a>
+      </nav>
+    </header>
     <main>
       <section className="hero shell" id="inicio">
-        <div className="hero-copy"><div className="eyebrow"><span className="live-dot"/> DESENVOLVIMENTO BACKEND · JAVA / SPRING</div><h1>Construindo o que<br/>acontece <em>por trás.</em></h1><p className="hero-description">Sou João Paulo, desenvolvedor com interesse em backend e sistemas que resolvem problemas reais. Gosto de transformar ideias em soluções claras, úteis e bem construídas.</p><div className="hero-actions"><a href="#projetos" className="button button-dark">Explorar projetos <Icon name="right" size={17}/></a><a href="#sobre" className="text-link">Um pouco sobre mim <Icon name="up" size={15}/></a></div></div>
-        <div className="hero-side"><div className="hero-monogram">JP<span>.</span></div><div className="side-caption"><span>BRASIL · 2026</span><span>01 / 04</span></div><div className="hero-rule"/><p>Curiosidade, consistência<br/>e código com propósito.</p></div>
+        <div className="hero-copy">
+          <div className="eyebrow"><span className="live-dot"/> Estudante de Engenharia de Software | Backend | Java / Spring</div>
+          <h1>Construindo o que<br/>acontece <em>por trás.</em></h1>
+          <p className="hero-description">Sou João Pedro, estudante de Engenharia de Software com foco em backend, Java e Spring. Gosto de transformar ideias em soluções claras, úteis e bem construídas.</p>
+          <div className="hero-actions"><a href="#projetos" className="button button-dark">Explorar projetos <Icon name="right" size={17}/></a><a href="#sobre" className="text-link">Um pouco sobre mim <Icon name="up" size={15}/></a></div>
+        </div>
+        <div className="hero-side">
+          <div className="portrait-frame"><img className="profile-photo" src="/images/joao-pedro-profile.png" alt="João Pedro De Souza"/><span className="portrait-spark spark-one"/><span className="portrait-spark spark-two"/></div>
+          <h2 className="portrait-name">João Pedro De Souza</h2>
+          <div className="side-caption"><span>BRASIL · 2026</span><span>18 ANOS</span></div><div className="hero-rule"/><p>Estudante de Engenharia de Software<br/>Backend · Java / Spring</p>
+        </div>
         <a className="scroll-cue" href="#projetos"><span>ROLE PARA EXPLORAR</span><span className="scroll-line"/></a>
       </section>
-      <section className="projects-section" id="projetos"><div className="shell"><div className="section-head"><div><div className="eyebrow section-eyebrow">SELEÇÃO DE TRABALHOS <span>— 04 PROJETOS</span></div><h2>Projetos em <em>movimento.</em></h2></div><p>Ideias em construção e entregas<br/>que já ganharam vida.</p></div><div className="project-grid">{projects.map(project => <ProjectCard key={project.number} project={project}/>)}</div><div className="project-foot"><span>{String(projects.length).padStart(2,'0')} projetos selecionados</span><span>Mais a caminho <span className="foot-arrow">↗</span></span></div></div></section>
-      <section className="about-section" id="sobre"><div className="shell about-grid"><div><div className="eyebrow section-eyebrow">UM POUCO SOBRE MIM</div><h2>Menos ruído.<br/><em>Mais intenção.</em></h2></div><div className="about-copy"><p>Sou estudante e desenvolvedor brasileiro, explorando o universo de APIs, bancos de dados e arquitetura backend. Acredito que bons produtos começam por entender bem o problema.</p><p>Tenho aprendido construindo: cada projeto é uma oportunidade de aprofundar fundamentos, colaborar e deixar o código um pouco melhor do que encontrei.</p><div className="about-note"><span className="note-symbol">✳</span><span>Em constante aprendizado,<br/>com os pés no presente.</span></div></div></div></section>
-      <section className="contact-section" id="contato"><div className="shell contact-inner"><div><div className="eyebrow section-eyebrow">VAMOS CONVERSAR?</div><h2>Uma boa ideia começa<br/>com um <em>olá.</em></h2></div><a className="contact-cta" href="https://github.com/joao-jps"><span>Visite meu GitHub</span><span className="contact-icon"><Icon name="up" size={22}/></span></a></div></section>
+      <section className="projects-section" id="projetos">
+        <div className="shell">
+          <div className="section-head"><div><div className="eyebrow section-eyebrow">PROJETOS PESSOAIS E ACADÊMICOS <span>— 04 PROJETOS</span></div><h2>Projetos em <em>movimento.</em></h2></div><p>Ideias em construção e entregas<br/>que já ganharam vida.</p></div>
+          <div className="project-grid">{projects.map(project => <ProjectCard key={project.number} project={project}/>)}</div>
+          <div className="project-foot"><span>{String(projects.length).padStart(2,'0')} projetos selecionados</span><span>Mais a caminho <span className="foot-arrow">↗</span></span></div>
+        </div>
+      </section>
+      <section className="about-section" id="sobre">
+        <div className="shell about-grid"><div><div className="eyebrow section-eyebrow">UM POUCO SOBRE MIM</div><h2>Menos ruído.<br/><em>Mais intenção.</em></h2></div>
+          <div className="about-copy"><p>Sou estudante de Engenharia de Software e desenvolvedor brasileiro, explorando o universo de APIs, bancos de dados e arquitetura backend. Acredito que bons produtos começam por entender bem o problema.</p><p>Estou constantemente me aprofundando e buscando melhorar minhas hard e soft skills para me tornar um estudante desenvolvedor melhor. Procuro minha primeira oportunidade para adquirir experiência, aprender e contribuir com resultados.</p><div className="about-note"><span className="note-symbol">✳</span><span>Em constante aprendizado,<br/>com os pés no presente.</span></div></div>
+        </div>
+      </section>
+      <section className="contact-section" id="contato">
+        <div className="shell contact-inner"><div><div className="eyebrow section-eyebrow">VAMOS CONVERSAR?</div><h2>Uma boa ideia começa<br/>com um <em>olá.</em></h2><p className="contact-intro">Escolha por onde prefere falar comigo.</p></div><ContactLinks/></div>
+      </section>
     </main>
-    <footer className="footer shell"><a href="#inicio" className="footer-mark">JP<span>.</span></a><span>Feito com cuidado · 2026</span><div className="social-links"><a href="https://github.com/joao-jps" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" size={17}/></a></div></footer>
+    <footer className="footer shell"><a href="#inicio" className="footer-mark" aria-label="Voltar ao início">JP<span>.</span></a><span>João Pedro De Souza · 2026</span><div className="footer-socials"><a href="https://github.com/joao-jps" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" size={17}/></a><a href="https://www.linkedin.com/in/joaojps/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={17}/></a><a href="mailto:jujpsouza@gmail.com" aria-label="E-mail"><Icon name="mail" size={17}/></a></div></footer>
   </>
 }

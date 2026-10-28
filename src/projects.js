@@ -1,4 +1,9 @@
-// Para adicionar um projeto, inclua um objeto nesta lista e escolha um dos temas de capa abaixo.
+/**
+ * Portfolio project catalog.
+ * Add a project object here to update the cards without editing the page layout.
+ * Required fields: number, title, category, status, description, stack, github, theme.
+ * Available cover themes: wine, job, bank, sushi.
+ */
 export const projects = [
   {
     number: '01', title: 'WineGuard Backend', category: 'Backend · FIWARE', status: 'Em desenvolvimento',
