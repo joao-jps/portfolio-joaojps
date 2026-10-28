@@ -7,8 +7,8 @@ export const projects = [
   },
   {
     number: '02', title: 'JobTrack API', category: 'Backend · REST API', status: 'Em desenvolvimento',
-    description: 'API para organizar candidaturas, acompanhar etapas de processos seletivos e manter oportunidades em um só lugar.',
-    stack: ['Java', 'Spring Boot', 'REST'], github: 'https://github.com/joao-jps/jobtrack-api', theme: 'job',
+    description: 'API para organizar projetos de desenvolvimento, acompanhar seu status e gerenciar tecnologias e matérias relacionadas.',
+    stack: ['Java', 'Spring Boot', 'PostgreSQL'], github: 'https://github.com/joao-jps/jobtrack-api', theme: 'job',
   },
   {
     number: '03', title: 'Spring Bank', category: 'Backend · Finanças', status: 'Em desenvolvimento',
